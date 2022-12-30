@@ -1,0 +1,109 @@
+// HEADER
+.all-nav{
+  border-bottom: 1px solid #ECECEC;
+    background-color: $main-background;
+
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+}
+
+.logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  color: $logo-color;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+
+  &__part {
+    color: $hover-color;
+  }
+}
+
+.page-nav {
+  @extend %centeredFlex ;
+  gap: 93px;
+}
+
+.nav-menu{
+  display: flex;
+  gap: 50px;
+  padding-left: 0;
+
+    &__link {
+    position: relative;
+    display: block;
+    padding: 32px 0;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    color: var(--headings-color);
+    letter-spacing: 0.02em;
+    text-decoration: none;
+
+    transition: color 250ms var(--time-function);
+
+      &:hover,
+      &:focus {
+        color: $hover-color;
+      }
+    
+      &--current {
+        color: $hover-color;
+      }
+    
+      &--current::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: $hover-color;
+        border-radius: 2px;
+      }
+  }
+}
+
+.side-nav {
+  display: flex;
+  gap: 50px;
+  padding-left: 0;
+
+    &__links {
+      @extend %centeredFlex;
+      gap: 10px;
+  
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.14;
+      color: inherit;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+  
+      transition: color 250ms var(--time-function);
+
+      &:hover,
+      &:focus {
+        color: $hover-color;
+      }
+    }
+    
+    .side-nav__icon {
+      fill: currentColor;
+
+      &:hover,
+      &:focus {
+        fill: $hover-color;
+      }
+    }
+}
+
+
+
