@@ -16,28 +16,18 @@ ul {
     margin-bottom: 0;
 }
 
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
 img {
     display: block;
     max-width: 100%;
     height: auto;
 }
 
-ul {
-    list-style: none;
-    padding-left: 0;
-}
 
-.section {
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
 
-.container {
-    width: 1200px;
-    padding: 0px 15px;
-    margin: 0 auto;
-}
 
-.list {
-    list-style-type: none;
-}
+
