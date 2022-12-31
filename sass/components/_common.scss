@@ -20,4 +20,22 @@
     @extend %visually-hidden;
 }
 
+.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.logo {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    color: $hover-color;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+}
+
+
+
 
