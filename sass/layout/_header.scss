@@ -4,27 +4,38 @@
     background-color: $main-background;
 
     &__container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      // display: flex;
+      // justify-content: space-around;
+      // align-items: center;
+      padding: 16px ;
+      margin: 0;
+
+      @media screen and (min-width:768px){
+        padding: 0;
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
 
 }
-
 .logo__header-part{
   color: $logo-color;
 }
 
 .page-nav {
-  @extend %centeredFlex ;
+  @extend %centeredFlex;
   gap: 93px;
 }
 
 .nav-menu{
-  display: flex;
-  gap: 50px;
-  padding-left: 0;
+  display: none;
 
+  @media screen and (min-width:768px) {
+    display: flex;
+    gap: 50px;
+    padding-left: 0;
+  }
+  
     &__link {
     position: relative;
     display: block;
@@ -62,10 +73,23 @@
 }
 
 .side-nav {
-  display: flex;
-  gap: 50px;
-  padding-left: 0;
+  display: none;
 
+  @media screen and (min-width:768px) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  @media screen and (min-width:1200px) {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    padding-left: 0;
+  }
+  
     &__links {
       @extend %centeredFlex;
       gap: 10px;
@@ -93,6 +117,43 @@
         fill: $hover-color;
       }
     }
+
+   .side-nav__icon--envelope{
+
+    width: 14px;
+    height: 10px;
+
+    @media screen and (min-width:1200px){
+      width: 16px;
+      height: 12px
+    }
+   }
+
+   .side-nav__icon--smartphone{
+
+    width: 10px;
+    height: 14px;
+
+    @media screen and (min-width:1200px) {
+      width: 12px;
+      height: 16px;
+    }
+      
+   }
+}
+
+.phone-menu-buttons{
+  width: 40px;
+  height: 40px;
+  fill: $logo-color;
+  @media screen and (min-width:768px){
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    fill: $hover-color;
+  }
 }
 
 

@@ -3,7 +3,7 @@
 }
 
 .team-container{
-    
+
     &__title{
         font-size: 36px;
         line-height: 1.16;
@@ -16,6 +16,7 @@
 
     &__list {
         @extend %centeredFlex;
+        flex-wrap: wrap;
         gap: 30px;
     }
 }
@@ -23,11 +24,24 @@
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
     background-color: $main-background;
+    width: calc((100% - 0*30px)/1);
+
+    @media screen and (min-width:768px){
+        width: calc((100% - 1*30px)/2);
+    }
+
+    @media screen and (min-width:1200px) {
+        width: calc((100% - 3*30px)/4);
+    }
+    
+
 
     &__item{
         background-color: $main-background;
         padding-top: 30px;
         padding-bottom: 30px;
+        
+        
     }
 
     &__name{

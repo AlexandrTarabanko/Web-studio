@@ -1,24 +1,52 @@
 .companies-container{
     &__title{
         color: $headings-color;
-        font-size: 36px;
-        line-height: 1.16;
+        font-size: 28px;
+        line-height: 1.17;
         text-align: center;
         letter-spacing: 0.03em;
     
-        margin-bottom: 50px;
+        margin-bottom: 30px;
+
+        @media screen and (min-width:1200px) {
+            font-size: 36px;
+            line-height: 1.16;
+
+            margin-bottom: 50px;
+        }
     }
 
     &__list{
         @extend %centeredFlex;
+        flex-wrap: wrap;
         gap: 30px;
+
+        @media screen and (min-width:768px) and (max-width:1200px) {
+            gap: 30px;
+            // column-gap: 0;
+        }
+        
+
+    }
+
+    &__item{
+
+        width: calc((100% - 1*30px)/2);
+
+        @media screen and (min-width:768px) {
+            width: calc((100% - 2*30px)/3);
+        }
+        @media screen and (min-width:1200px) {
+            width: calc((100% - 5*30px)/6);
+        }
+        
     }
 
     &__link{
-        display: block;
+        @extend %centeredFlex;
+        width: 100%;    
         border: 1px solid #afb1b8;
         border-radius: 4px;
-        width: 170px;
         height: 92px;
         padding: 16px 32px;
     

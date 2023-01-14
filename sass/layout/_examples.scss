@@ -1,7 +1,11 @@
 .examples {
-    background-color: var(--main-background);
-
+    background-color: $main-background;
     padding-top: 0;
+    display: none;
+
+    @media screen and (min-width:1200px){
+        display: block;
+    }
 }
 
 .examples-container{
@@ -22,6 +26,7 @@
 
     &__item{
         position: relative;
+        width: calc((100% - 2*30px)/3);
     }
 
 }
