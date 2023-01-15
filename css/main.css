@@ -50,7 +50,7 @@ address {
   overflow: hidden;
 }
 
-.variant-set, .filter-list, .footer-form__data, .footer-form, .footer-socials__list, .footer-info__list, .footer-info, .companies-container__link, .companies-container__list, .social-list, .team-container__list, .examples-container__list, .features-space, .side-nav__links, .form-terms, .close-button {
+.variant-set, .footer-form__data, .footer-form, .footer-socials__list, .footer-info__list, .footer-info, .companies-container__link, .companies-container__list, .social-list, .team-container__list, .examples-container__list, .features-space, .side-nav__links, .form-terms, .close-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1348,8 +1348,29 @@ address {
 }
 
 .filter-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  max-width: 334px;
+}
+@media screen and (min-width: 768px) {
+  .filter-list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 50px;
+    max-width: 100%;
+  }
 }
 .filter-list__btn {
   font-weight: 500;
