@@ -1,99 +1,170 @@
-.mobile-menu-btn{
-    display: block;
-    margin-left: auto;
-    @media screen and (min-width:768px){
+
+.mobile-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    
+}
+
+.menu-toggle {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    min-height: 40px;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+
+    @media screen and (min-width:768px) {
         display: none;
     }
+
+    .menu-container & {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+    }
+    
+}
+
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 48px 40px;
+    background-color: $main-background;
+    z-index: 999;
+
+    // transform: translateY(-100%);
+    visibility: hidden;
+    opacity: 0;
+
+    // transition: transform 250ms var(--time-function);
+    transition: visibility 250ms var(--time-function), opacity 250ms var(--time-function);
+     
+
+    &.is-open {
+        visibility: visible;
+        opacity: 1;
+        // transform: translateY(0);
+    }
+}
+
+
+.phone-menu-icons {
+    width: 40px;
+    height: 40px;
+    fill: $logo-color;
+
+    &:hover,
+    &:focus {
+        fill: $hover-color;
+    }
+
+    @media screen and (min-width:768px) {
+        display: none;
+    }
+}
+
+// TOP
+
+.mobile-nav__item{
+    margin-bottom: 36px;
+}
+
+.mobile-nav__link{
+    font-weight: 500;
+    font-size:  40px ;
+    line-height: 1.175;
+    letter-spacing: 0.02em;
+    color: $headings-color;
+  
+
+    transition: color 250ms var(--time-function);
+    
+        &:hover,
+        &:focus {
+            color: $hover-color;
+        }
+    
+        &--current {
+            color: $hover-color;
+        }
+}
+
+// BOTTOM
+
+.mobile-menu-contacts__item{
+    width: 100%;
+    &:first-child{
+        margin-bottom:32px ;
+    }
+   margin-bottom:64px;
+}
+
+.mobile-menu-contacts__link{
+    color: inherit;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+
+}
+
+.mobile-menu-contacts__link--blue{
+    max-width: 296px;
+    font-size: 34px;
+    line-height: 1.17;
+    color: $hover-color;
+}
+
+
+.mobile-menu-socials{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.mobile-menu-socials__item{
+    display: inline-flex;
+    gap: 10px;
+}
+
+.mobile-menu-socials__border{
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    transform: rotate(180deg);
+}
+
+.mobile-menu-socials__link{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+
+    color: $hover-color;
 }
 
 
 
 
-// .menu {
-//     display: flex;
-//     padding: 0;
-//     margin: 0;
-//     list-style: none;
-// }
 
-// @media (max-width: 767px) {
-//     .menu {
-//         display: none;
-//     }
-// }
 
-// .menu .link {
-//     padding: 10px;
-//     color: inherit;
-//     text-decoration: none;
-// }
 
-// .menu .link:hover,
-// .menu .link:focus {
-//     text-decoration: underline;
-// }
 
-// .menu-toggle {
-//     min-height: 40px;
-//     min-width: 40px;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-
-//     margin: 0;
-//     padding: 0;
-//     background-color: transparent;
-//     cursor: pointer;
-//     border: none;
-//     border-radius: 50%;
-//     outline: none;
-// }
-
-// @media (min-width: 768px) {
-//     .menu-toggle {
-//         display: none;
-//     }
-// }
-
-// .menu-toggle:hover,
-// .menu-toggle:focus {
-//     background-color: rgba(0, 0, 0, 0.1);
-// }
-
-// .menu-container {
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     width: 100vw;
-//     height: 100vh;
-//     padding: 32px;
-//     background-color: #3f51b5;
-//     z-index: 999;
-
-//     transform: translateX(100%);
-//     transition: transform 250ms ease-in-out;
-// }
-
-// .menu-container.is-open {
-//     transform: translateX(0);
-// }
-
-// .menu-container .menu-toggle {
-//     position: absolute;
-//     top: 16px;
-//     right: 16px;
-//     color: #fff;
-// }
-
-// .mobile-menu {
-//     padding: 0;
-//     margin: 0;
-//     list-style: none;
-// }
-
-// .mobile-menu .link {
-//     display: block;
-//     padding: 10px;
-//     color: #fff;
-//     text-decoration: none;
-// }

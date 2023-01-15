@@ -4,13 +4,14 @@
     background-color: $main-background;
 
     &__container {
-      // display: flex;
-      // justify-content: space-around;
-      // align-items: center;
+      display: block;
       padding: 16px ;
       margin: 0;
 
       @media screen and (min-width:768px){
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
         padding: 0;
         margin-left: auto;
         margin-right: auto;
@@ -23,8 +24,15 @@
 }
 
 .page-nav {
-  @extend %centeredFlex;
-  gap: 93px;
+  display: block;
+
+  @media screen and (min-width:768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 93px;
+  }
+  
 }
 
 .nav-menu{
@@ -142,19 +150,9 @@
    }
 }
 
-.phone-menu-buttons{
-  width: 40px;
-  height: 40px;
-  fill: $logo-color;
-  @media screen and (min-width:768px){
-    display: none;
-  }
 
-  &:hover,
-  &:focus {
-    fill: $hover-color;
-  }
-}
+
+
 
 
 
