@@ -128,9 +128,12 @@
 
 .mobile-menu-contacts__link--blue{
     max-width: 296px;
-    font-size: 34px;
     line-height: 1.17;
     color: $hover-color;
+
+    @media screen and (min-width:480px){
+        font-size: 34px;
+    }
 }
 
 
@@ -154,11 +157,16 @@
 
 .mobile-menu-socials__link{
     font-weight: 500;
-    font-size: 18px;
+    font-size: 12px;
     line-height: 1.22;
     letter-spacing: 0.02em;
-
     color: $hover-color;
+    padding-right: 0px;
+
+    @media screen and (min-width:480px) {
+        font-size: 18px;
+        padding-right: 10px;
+    }
 }
 
 

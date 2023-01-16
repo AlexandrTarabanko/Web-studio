@@ -40,13 +40,28 @@
 }
 
 .variant-set {
-    @extend %centeredFlex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     flex-wrap: wrap;
-    flex-basis: calc((100% - 60px) / 3);
+    // flex-basis: calc((100% - 60px) / 3);
     gap: 30px;
+
+
 }
 
 .variant-card {
+    flex-basis: calc((100% - 0*30px)/1);
+
+    @media screen and (min-width:768px) {
+        flex-basis: calc((100% - 1*30px)/2);
+    }
+
+    @media screen and (min-width:1200px) {
+        flex-basis: calc((100% - 2*30px)/3);
+    }
+
+
     &__poster {
         position: relative;
         overflow: hidden;
@@ -91,12 +106,16 @@
     display: inline-block;
     top: 0;
     left: 0;
-    height: auto;
+    height: 294px;
     width: 100%;
     background-color: $variant-menu-overlay;
 
     transform: translateY(100%);
     transition: transform 250ms var(--time-function);
+
+    @media screen and (min-width:768px) {
+        height: auto;
+    }
 
     .variant-card__link:hover & {
         transform: translateY(0);

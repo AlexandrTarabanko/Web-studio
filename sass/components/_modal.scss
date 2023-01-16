@@ -22,9 +22,8 @@
     padding: 40px;
     transform: translate(-50%, -50%);
     width: 100%;
-    max-width: 450px;
     height: 100%;
-    
+    max-width: 450px;
     max-height: 609px;
 
     background-color: $main-background;
@@ -66,9 +65,15 @@
         color: $headings-color;
         font-weight: 700;
         font-size: 20px;
-        line-height: 1.15;
+        line-height: 1.5;
         text-align: center;
         letter-spacing: 0.03em;
+
+
+        @media screen and (min-width:1200px) {
+            font-size: 20px;
+            line-height: 1.15;
+        }
     }
 
     &__btn {
@@ -177,6 +182,21 @@
     gap: 9px;
     margin-top: 20px;
     margin-bottom: 30px;
+
+    @media screen and (min-width:320px) {
+        font-size: 8px;
+        line-height: 1.16;
+    }
+
+    @media screen and (min-width:480px) {
+        font-size: 12px;
+        line-height: 1.16;
+    }
+
+    @media screen and (min-width:1200px) {
+        font-size: 14px;
+        line-height: 1.71;
+    }
 
     &__checkbox{
         appearance: none;

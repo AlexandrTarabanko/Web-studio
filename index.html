@@ -170,11 +170,33 @@
           <h2 class="team-container__title">Наша команда</h2>
           <ul class="team-container__list">
             <li class="team-card">
-              <img
-                srcset="./images/product-designer.jpg 1x, ./images/product-designer@2x.jpg 2x"
-                src="./images/product-designer.jpg"
-                alt="Фото дизайнера"
-              />
+              <picture>
+                <source
+                  type="image/jpeg"
+                  srcset="
+                    ./images/product-designer-mobile.jpg    1x,
+                    ./images/product-designer-mobile@2x.jpg 2x
+                  "
+                  media="(max-width:767px)"
+                />
+                <source
+                  type="image/jpeg"
+                  srcset="
+                    ./images/product-designer-tablet.jpg    1x,
+                    ./images/product-designer-tablet@2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  type="image/jpeg"
+                  srcset="
+                    ./images/product-designer-desktop.jpg    1x,
+                    ./images/product-designer-desktop@2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <img src="./images/product-designer-desktop.jpg" alt="Фото дизайнера" />
+              </picture>
               <div class="team-card__item">
                 <h3 class="team-card__name">Ігор Дем'яненко</h3>
                 <p class="team-card__prof">Product Designer</p>
@@ -211,11 +233,33 @@
               </div>
             </li>
             <li class="team-card">
-              <img
-                srcset="./images/frontend-developer.jpg 1x, ./images/frontend-developer@2x.jpg 2x"
-                src="./images/frontend-developer.jpg"
-                alt="Фото разробника"
-              />
+              <picture>
+                <source
+                  type="image/jpeg"
+                  srcset="
+                    ./images/frontend-developer-mobile.jpg    1x,
+                    ./images/frontend-developer-mobile@2x.jpg 2x
+                  "
+                  media="(max-width:767px)"
+                />
+                <source
+                  type="image/jpeg"
+                  srcset="
+                    ./images/frontend-developer-tablet.jpg    1x,
+                    ./images/frontend-developer-tablet@2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  type="image/jpeg"
+                  srcset="
+                    ./images/frontend-developer-desktop.jpg    1x,
+                    ./images/frontend-developer-desktop@2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <img src="./images/frontend-developer-desktop.jpg" alt="Фото дизайнера" />
+              </picture>
               <div class="team-card__item">
                 <h3 class="team-card__name">Ольга Рєпіна</h3>
                 <p class="team-card__prof">Frontend Developer</p>
@@ -252,11 +296,24 @@
               </div>
             </li>
             <li class="team-card">
-              <img
-                srcset="./images/marketing.jpg 1x, ./images/marketing@2x.jpg 2x"
-                src="./images/marketing.jpg"
-                alt="Фото маркетолога"
-              />
+              <picture>
+                <source
+                  type="image/jpeg"
+                  srcset="./images/marketing-mobile.jpg 1x, ./images/marketing-mobile@2x.jpg 2x"
+                  media="(max-width:767px)"
+                />
+                <source
+                  type="image/jpeg"
+                  srcset="./images/marketing-tablet.jpg 1x, ./images/marketing-tablet@2x.jpg 2x"
+                  media="(min-width:768px)"
+                />
+                <source
+                  type="image/jpeg"
+                  srcset="./images/marketing-desktop.jpg 1x, ./images/marketing-desktop@2x.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <img src="./images/marketing-desktop.jpg" alt="Фото дизайнера" />
+              </picture>
               <div class="team-card__item">
                 <h3 class="team-card__name">Микола Тарасов</h3>
                 <p class="team-card__prof">Marketing</p>
@@ -293,11 +350,27 @@
               </div>
             </li>
             <li class="team-card">
-              <img
-                srcset="./images/ui-designer.jpg 1x, ./images/ui-designer@2x.jpg 2x"
-                src="./images/ui-designer.jpg"
-                alt="Фото іншого дезайнера"
-              />
+              <picture>
+                <source
+                  type="image/jpeg"
+                  srcset="./images/ui-designer-mobile.jpg 1x, ./images/ui-designer-mobile@2x.jpg 2x"
+                  media="(max-width:767px)"
+                />
+                <source
+                  type="image/jpeg"
+                  srcset="./images/ui-designer-tablet.jpg 1x, ./images/ui-designer-tablet@2x.jpg 2x"
+                  media="(min-width:768px)"
+                />
+                <source
+                  type="image/jpeg"
+                  srcset="
+                    ./images/ui-designer-desktop.jpg    1x,
+                    ./images/ui-designer-desktop@2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <img src="./images/ui-designer-desktop.jpg" alt="Фото дизайнера" />
+              </picture>
               <div class="team-card__item">
                 <h3 class="team-card__name">Михайло Єрмаков</h3>
                 <p class="team-card__prof">UI Designer</p>
@@ -392,7 +465,7 @@
       <div class="footer-container container">
         <div class="footer-info">
           <a class="logo logo--footer" href="index.html"
-            ><span class="logo__footer-part">Web</span>studio</a
+            ><span class="logo__footer-part">Web</span>Studio</a
           >
           <address>
             <ul class="footer-info__list">

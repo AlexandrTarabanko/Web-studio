@@ -5,13 +5,18 @@
 .team-container{
 
     &__title{
-        font-size: 36px;
-        line-height: 1.16;
         text-align: center;
+        font-size: 28px;
+        line-height: 1.178;
         letter-spacing: 0.03em;
         color: $headings-color;
     
         margin-bottom: 50px;
+
+        @media screen and (min-width:1200px) {
+            font-size: 36px;
+            line-height: 1.16;
+        }
     }
 
     &__list {

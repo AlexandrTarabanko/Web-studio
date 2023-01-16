@@ -86,7 +86,7 @@
   @media screen and (min-width:768px) {
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    // align-items: center;
     flex-direction: column;
     gap: 10px;
   }
@@ -99,8 +99,10 @@
   }
   
     &__links {
-      @extend %centeredFlex;
-      gap: 10px;
+      display: flex;
+      align-items: center;
+      
+      gap: 8px;
   
       font-weight: 500;
       font-size: 14px;
@@ -114,6 +116,10 @@
       &:hover,
       &:focus {
         color: $hover-color;
+      }
+
+      @media screen and (min-width:1200px) {
+        justify-content: center;
       }
     }
     
