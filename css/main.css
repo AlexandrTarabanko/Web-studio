@@ -188,6 +188,7 @@ address {
             transform: translate(-50%, -50%);
     max-width: 528px;
     max-height: 581px;
+    min-height: auto;
   }
 }
 
