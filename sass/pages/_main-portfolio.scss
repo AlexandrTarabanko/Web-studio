@@ -41,7 +41,7 @@
 
 .variant-set {
     display: flex;
-    align-items: center;
+    // align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     // flex-basis: calc((100% - 60px) / 3);
@@ -68,7 +68,10 @@
     }
 
     &__link {
-        display: block;
+        // display: block;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
         text-decoration: none;
         transition: box-shadow 250ms var(--time-function);
 
@@ -79,6 +82,7 @@
     }
 
     &__description{
+        flex-grow: 1;
         padding: 20px 24px;
         border: 1px solid #eeeeee;
         border-top: none;

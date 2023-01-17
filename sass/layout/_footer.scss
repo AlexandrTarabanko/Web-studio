@@ -17,6 +17,7 @@
 
     @media screen and (min-width:768px) {
         gap: 165px;
+        align-items: baseline;
         row-gap: 60px;
         // flex-basis: calc((100% - 1*165px)/2);    
         flex-direction: row;
